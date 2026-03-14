@@ -65,3 +65,40 @@ if(books[index].status=="Issued"){
 alert("Book already issued");
 return;
 }
+
+books[index].status="Issued";
+displayBooks();
+
+}
+
+function returnBook(index){
+
+books[index].status="Available";
+displayBooks();
+
+}
+
+function deleteBook(index){
+
+books.splice(index,1);
+displayBooks();
+
+}
+
+function searchBook(){
+
+let input = document.getElementById("search").value.toLowerCase();
+
+let rows = document.querySelectorAll("#bookList tr");
+
+rows.forEach(row=>{
+
+let text = row.innerText.toLowerCase();
+
+row.style.display = text.includes(input) ? "" : "none";
+
+});
+
+}
+
+displayBooks();
