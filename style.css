@@ -49,3 +49,40 @@ button:hover {
 .search-section {
   margin-bottom: 20px;
 }
+
+.search-section input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #667eea;
+  color: white;
+}
+
+.issue {
+  background: #28a745;
+}
+
+.return {
+  background: #ffc107;
+  color: black;
+}
+
+.delete {
+  background: #dc3545;
+}
