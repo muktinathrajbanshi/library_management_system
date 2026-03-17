@@ -108,3 +108,16 @@ button:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-section input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+}
