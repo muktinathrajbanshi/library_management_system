@@ -146,3 +146,20 @@ td {
 tr:hover td {
   background: white;
 }
+
+.issue {
+  background: linear-gradient(135deg, #00c853, #69f0ae);
+}
+
+.return {
+  background: linear-gradient(135deg, #ffb300, #ffd54f);
+  color: black;
+}
+
+.delete {
+  background: linear-gradient(135deg, #ff5252, #ff1744);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
