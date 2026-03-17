@@ -121,3 +121,28 @@ button:hover {
   outline: none;
   background: rgba(255, 255, 255, 0.8);
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+th {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 14px;
+  font-size: 14px;
+}
+
+td {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  transition: 0.2s;
+}
+
+tr:hover td {
+  background: white;
+}
