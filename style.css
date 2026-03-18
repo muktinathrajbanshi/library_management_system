@@ -181,7 +181,7 @@ button:hover {
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 0;
+  min-width: 600px;
 }
 
 th {
@@ -198,6 +198,12 @@ td {
   text-align: center;
   border-bottom: 1px solid #eee;
   transition: 0.2s;
+}
+
+td button {
+  white-space: nowrap;
+  padding: 8px 12px;
+  font-size: 12px;
 }
 
 tr:hover td {
