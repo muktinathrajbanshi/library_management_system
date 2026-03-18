@@ -1,3 +1,4 @@
+/* Base styles unchanged */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
 * {
@@ -32,8 +33,10 @@ header {
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.8s ease-in-out;
 }
 
+/* Dashboard cards */
 .dashboard {
   display: flex;
   gap: 20px;
@@ -92,6 +95,7 @@ header {
   margin-top: 10px;
 }
 
+/* Form section */
 .form-section {
   display: flex;
   gap: 15px;
@@ -124,6 +128,27 @@ button {
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.6s;
+}
+
+button:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
 }
 
 button:hover {
@@ -131,6 +156,7 @@ button:hover {
   box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
 }
 
+/* Search section */
 .search-section input {
   width: 100%;
   padding: 14px;
@@ -141,6 +167,7 @@ button:hover {
   margin-bottom: 20px;
 }
 
+/* Table */
 .table-wrapper {
   overflow-x: auto;
   border-radius: 15px;
@@ -172,6 +199,7 @@ tr:hover td {
   background: #f8fafc;
 }
 
+/* Status badges */
 .issue {
   background: linear-gradient(135deg, #22c55e, #4ade80);
 }
@@ -185,6 +213,7 @@ tr:hover td {
   background: linear-gradient(135deg, #ef4444, #f87171);
 }
 
+/* Loader */
 .loader {
   position: fixed;
   top: 0;
@@ -216,6 +245,7 @@ tr:hover td {
   }
 }
 
+/* Toggle switch */
 .toggle-container {
   position: absolute;
   top: 20px;
@@ -260,58 +290,33 @@ tr:hover td {
 input:checked + .slider {
   background: #6366f1;
 }
-
 input:checked + .slider:before {
   transform: translateX(24px);
 }
 
+/* Light mode */
 .light-mode {
   background: #f8fafc;
+}
+
+.light-mode header {
+  color: #0f172a;
 }
 
 .light-mode .container {
   background: white;
   color: black;
 }
-
 .light-mode .card {
   background: #ffffff;
   color: black;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-
 .light-mode td {
   background: white;
 }
 
-button {
-  position: relative;
-  overflow: hidden;
-}
-
-button::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.6s;
-}
-
-button:active::after {
-  width: 200px;
-  height: 200px;
-  opacity: 0;
-}
-
-.container {
-  animation: fadeIn 0.8s ease-in-out;
-}
-
+/* Fade animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -323,25 +328,39 @@ button:active::after {
   }
 }
 
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .dashboard {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .card {
+    min-width: 180px;
+    padding: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     font-size: 22px;
   }
-
   .container {
     padding: 20px;
   }
-
   .dashboard {
     flex-direction: column;
   }
-
   .form-section {
     flex-direction: column;
   }
-
   button {
     width: 100%;
+  }
+  .card p {
+    font-size: 28px;
+  }
+  .table-wrapper table {
+    min-width: 500px;
   }
 }
 
@@ -349,16 +368,26 @@ button:active::after {
   body {
     padding: 10px;
   }
-
   header {
     font-size: 20px;
   }
-
   .container {
     padding: 15px;
   }
-
   .card p {
-    font-size: 26px;
+    font-size: 24px;
+  }
+  th,
+  td {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .form-section input {
+    padding: 12px;
+    font-size: 13px;
+  }
+  button {
+    padding: 12px;
+    font-size: 14px;
   }
 }
