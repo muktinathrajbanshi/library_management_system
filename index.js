@@ -1,3 +1,36 @@
+// LOADER
+window.addEventListener("load", () => {
+  document.querySelector(".loader").style.display = "none";
+});
+
+// DARK MODE TOGGLE
+const toggle = document.getElementById("themeToggle");
+
+toggle.addEventListener("change", () => {
+  document.body.classList.toggle("light-mode");
+});
+
+// ANIMATED COUNTER
+const counters = document.querySelectorAll(".card p");
+
+counters.forEach(counter => {
+  let start = 0;
+  const end = parseInt(counter.innerText);
+  const duration = 1000;
+
+  const updateCounter = () => {
+    start += Math.ceil(end / 50);
+    if(start < end){
+      counter.innerText = start;
+      setTimeout(updateCounter, 20);
+    } else {
+      counter.innerText = end;
+    }
+  };
+
+  updateCounter();
+});
+
 let books = JSON.parse(localStorage.getItem("books")) || [];
 
 function updateDashboard(){
