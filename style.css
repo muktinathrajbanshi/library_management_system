@@ -328,27 +328,66 @@ input:checked + .slider:before {
   }
 }
 
-/* ========== MOBILE RESPONSIVE ========== */
-@media (max-width: 1024px) {
+/* ===== MOBILE-FIRST RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 25px;
+  }
   .dashboard {
-    flex-wrap: wrap;
-    gap: 15px;
+    gap: 18px;
+  }
+  .card {
+    min-width: 200px;
+    padding: 22px;
+  }
+  .card p {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 980px) {
+  .container {
+    padding: 22px;
+  }
+  .dashboard {
+    gap: 16px;
   }
   .card {
     min-width: 180px;
     padding: 20px;
   }
+  .card p {
+    font-size: 30px;
+  }
+  .form-section input {
+    font-size: 13px;
+  }
+  button {
+    font-size: 15px;
+    padding: 13px 18px;
+  }
+  .table-wrapper table {
+    min-width: 550px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   header {
-    font-size: 22px;
+    font-size: 24px;
   }
   .container {
     padding: 20px;
   }
   .dashboard {
     flex-direction: column;
+    gap: 15px;
+  }
+  .card {
+    padding: 18px;
+  }
+  .card p {
+    font-size: 28px;
   }
   .form-section {
     flex-direction: column;
@@ -356,38 +395,7 @@ input:checked + .slider:before {
   button {
     width: 100%;
   }
-  .card p {
-    font-size: 28px;
-  }
   .table-wrapper table {
     min-width: 500px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
-  header {
-    font-size: 20px;
-  }
-  .container {
-    padding: 15px;
-  }
-  .card p {
-    font-size: 24px;
-  }
-  th,
-  td {
-    padding: 10px;
-    font-size: 12px;
-  }
-  .form-section input {
-    padding: 12px;
-    font-size: 13px;
-  }
-  button {
-    padding: 12px;
-    font-size: 14px;
   }
 }
