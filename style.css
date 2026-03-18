@@ -453,6 +453,15 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 468px) {
+  table {
+    min-width: 420px;
+  }
+  th,
+  td {
+    padding: 6px;
+    font-size: 9px;
+  }
+
   header {
     font-size: 18px;
   }
