@@ -396,6 +396,13 @@ input:checked + .slider:before {
     font-size: 12px;
     padding: 12px;
   }
+  table {
+    min-width: 550px;
+  }
+  td button {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
 }
 
 /* 700px */
@@ -427,6 +434,14 @@ input:checked + .slider:before {
     font-size: 11px;
     padding: 10px;
   }
+  table {
+    min-width: 500px;
+  }
+
+  td button {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
 }
 
 /* 480px */
@@ -457,6 +472,16 @@ input:checked + .slider:before {
     font-size: 14px;
     padding: 12px;
   }
+  table {
+    min-width: 450px; /* allows horizontal scroll */
+  }
+
+  td button {
+    padding: 4px 6px;
+    font-size: 9px;
+    margin: 2px 0;
+    display: inline-block;
+  }
 }
 
 /* 468px */
@@ -482,5 +507,19 @@ input:checked + .slider:before {
   }
   .dashboard {
     gap: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  table {
+    min-width: 400px;
+  }
+
+  td button {
+    display: block; /* stack buttons vertically */
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 4px 6px;
+    font-size: 9px;
   }
 }
