@@ -1,4 +1,6 @@
-/* Base styles unchanged */
+/* =========================
+   BASE STYLES
+========================= */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
 * {
@@ -24,6 +26,7 @@ header {
   letter-spacing: 1px;
 }
 
+/* Container */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -36,7 +39,7 @@ header {
   animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Dashboard cards */
+/* Dashboard Cards */
 .dashboard {
   display: flex;
   gap: 20px;
@@ -95,7 +98,7 @@ header {
   margin-top: 10px;
 }
 
-/* Form section */
+/* Form Section */
 .form-section {
   display: flex;
   gap: 15px;
@@ -156,7 +159,7 @@ button:hover {
   box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
 }
 
-/* Search section */
+/* Search Section */
 .search-section input {
   width: 100%;
   padding: 14px;
@@ -169,14 +172,16 @@ button:hover {
 
 /* Table */
 .table-wrapper {
+  width: 100%;
   overflow-x: auto;
   border-radius: 15px;
+  margin-bottom: 25px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px;
+  min-width: 0;
 }
 
 th {
@@ -245,7 +250,7 @@ tr:hover td {
   }
 }
 
-/* Toggle switch */
+/* Toggle Switch */
 .toggle-container {
   position: absolute;
   top: 20px;
@@ -298,11 +303,9 @@ input:checked + .slider:before {
 .light-mode {
   background: #f8fafc;
 }
-
 .light-mode header {
   color: #0f172a;
 }
-
 .light-mode .container {
   background: white;
   color: black;
@@ -316,7 +319,7 @@ input:checked + .slider:before {
   background: white;
 }
 
-/* Fade animation */
+/* Fade Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -328,8 +331,11 @@ input:checked + .slider:before {
   }
 }
 
-/* ===== MOBILE-FIRST RESPONSIVE DESIGN ===== */
+/* =========================
+   MOBILE-FIRST RESPONSIVE
+========================= */
 
+/* 1200px */
 @media (max-width: 1200px) {
   .container {
     padding: 25px;
@@ -346,16 +352,8 @@ input:checked + .slider:before {
   }
 }
 
+/* 980px */
 @media (max-width: 980px) {
-  table {
-    min-width: 550px;
-  }
-  th,
-  td {
-    padding: 12px;
-    font-size: 12px;
-  }
-
   .container {
     padding: 22px;
   }
@@ -376,21 +374,15 @@ input:checked + .slider:before {
     font-size: 15px;
     padding: 13px 18px;
   }
-  .table-wrapper table {
-    min-width: 550px;
+  th,
+  td {
+    font-size: 12px;
+    padding: 12px;
   }
 }
 
+/* 700px */
 @media (max-width: 700px) {
-  table {
-    min-width: 480px;
-  }
-  th,
-  td {
-    padding: 10px;
-    font-size: 11px;
-  }
-
   header {
     font-size: 24px;
   }
@@ -413,21 +405,15 @@ input:checked + .slider:before {
   button {
     width: 100%;
   }
-  .table-wrapper table {
-    min-width: 500px;
+  th,
+  td {
+    font-size: 11px;
+    padding: 10px;
   }
 }
 
+/* 480px */
 @media (max-width: 480px) {
-  table {
-    min-width: 450px;
-  }
-  th,
-  td {
-    padding: 8px;
-    font-size: 10px;
-  }
-
   header {
     font-size: 20px;
   }
@@ -439,12 +425,12 @@ input:checked + .slider:before {
   }
   th,
   td {
-    font-size: 12px;
-    padding: 10px;
+    font-size: 10px;
+    padding: 8px;
   }
   .form-section input {
-    font-size: 13px;
-    padding: 12px;
+    font-size: 12px;
+    padding: 10px;
   }
   button {
     font-size: 14px;
@@ -452,16 +438,8 @@ input:checked + .slider:before {
   }
 }
 
+/* 468px */
 @media (max-width: 468px) {
-  table {
-    min-width: 420px;
-  }
-  th,
-  td {
-    padding: 6px;
-    font-size: 9px;
-  }
-
   header {
     font-size: 18px;
   }
@@ -470,8 +448,8 @@ input:checked + .slider:before {
   }
   th,
   td {
-    font-size: 11px;
-    padding: 8px;
+    font-size: 9px;
+    padding: 6px;
   }
   .form-section input {
     font-size: 12px;
